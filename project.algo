@@ -1,0 +1,27 @@
+ALGORITHM sentence_analysis
+VAR
+    c               : CHARACTER;
+    length          : INTEGER := 0;
+    word_count      : INTEGER := 1;
+    vowel_count     : INTEGER := 0;
+BEGIN
+    REPEAT
+        Read(c);
+        length := length + 1;
+
+        IF c = ' ' THEN
+            word_count := word_count + 1;
+        ENDIF
+
+        IF c = 'a' OR c = 'e' OR c = 'i' OR c = 'o' OR c = 'u' OR
+           c = 'A' OR c = 'E' OR c = 'I' OR c = 'O' OR c = 'U' THEN
+           // if c in [a,e,i,o,u] or [A,E,I,O,U] zeda ok
+            vowel_count := vowel_count + 1;
+        ENDIF
+
+    UNTIL c = '.'
+
+    Write("Length: ", length);
+    Write("Words: ", word_count);
+    Write("Vowels: ", vowel_count);
+END
