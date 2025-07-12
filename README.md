@@ -6,7 +6,6 @@ and calculates:
 - Number of vowels
 
 ## How it works
-
 The algorithm uses counters for:
 - `length` for character count,
 - `word_count` for counting words (space-separated),
